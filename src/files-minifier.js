@@ -16,7 +16,7 @@ module.exports = (value, outputPath) => {
       minifyJS: true, // Minify JavaScript in script elements and event attributes (uses UglifyJS)
       removeComments: true, // Strip HTML comments
       removeEmptyAttributes: true, // Remove all attributes with whitespace-only values
-      removeEmptyElements: true, // Remove all elements with empty contents
+      removeEmptyElements: false, // Remove all elements with empty contents
       sortAttributes: true, // Sort attributes by frequency
       sortClassName: true, // Sort style classes by frequency
       useShortDoctype: true, // Replaces the doctype with the short (HTML5) doctype
