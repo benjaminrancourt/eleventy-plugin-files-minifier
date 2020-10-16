@@ -53,7 +53,7 @@ registry:
 npm publish --dry-run
 
 # For real (are you really sure?)
-npm publish
+npm publish --access public
 ```
 
 ## License
