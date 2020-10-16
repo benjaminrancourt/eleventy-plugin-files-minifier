@@ -1,0 +1,57 @@
+{
+  "name": "@sherby/eleventy-plugin-files-minifier",
+  "version": "1.0.0",
+  "description": "An Eleventy plugin to automatically minify files",
+  "keywords": [
+    "11ty",
+    "code",
+    "eleventy",
+    "eleventy-plugin",
+    "files",
+    "html",
+    "json",
+    "min",
+    "minification",
+    "sherby",
+    "transform",
+    "webmanifest",
+    "xml",
+    "xsl"
+  ],
+  "homepage": "https://github.com/ranb2002/eleventy-plugin-files-minifier#readme",
+  "bugs": {
+    "url": "https://github.com/ranb2002/eleventy-plugin-files-minifier/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ranb2002/eleventy-plugin-files-minifier.git"
+  },
+  "license": "MIT",
+  "author": "Benjamin Rancourt",
+  "main": ".eleventy.js",
+  "files": [
+    ".eleventy.js",
+    "src/files-minifier.js"
+  ],
+  "scripts": {
+    "format": "npm-run-all format:*",
+    "format:eslint": "npm run lint:eslint -- --fix",
+    "format:prettier": "npm run lint:prettier -- --write",
+    "lint": "npm-run-all lint:*",
+    "lint:eslint": "eslint --ignore-path .gitignore . --ext js,json,md",
+    "lint:prettier": "prettier --ignore-path .gitignore --check '**/*.{js,json,md}'"
+  },
+  "dependencies": {
+    "html-minifier": "^4.0.0",
+    "pretty-data": "^0.40.0"
+  },
+  "devDependencies": {
+    "eslint-config-udes": "^0.4.3",
+    "eslint-plugin-json-format": "^2.0.1",
+    "eslint-plugin-markdown": "^1.0.2",
+    "eslint-plugin-prettier": "^3.1.4",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^2.1.2",
+    "prettier-config-udes": "0.0.6"
+  }
+}
