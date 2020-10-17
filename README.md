@@ -1,14 +1,14 @@
 # eleventy-plugin-files-minifier
 
 This plugin allow you to automatically **minify** files when builting with **[Eleventy](https://www.11ty.dev/)**.
-It currently supports `html`, `json`, `xml`, `xsl` and `webmanifest` files.
+It currently supports `css`, `html`, `json`, `xml`, `xsl` and `webmanifest` files.
 
 Why should you minify your files? Simply to reduce the data transfered between your hosting servers and your visitors,
 even if some of them maybe some bots.
 
 Under the hood, this plugin use the following plugins to minify code:
 
-- [pretty-data](https://www.npmjs.com/package/pretty-data): `json`, `xml` and `webmanifest`
+- [pretty-data](https://www.npmjs.com/package/pretty-data): `css`, `json`, `xml` and `webmanifest`
 - [html-minifier](https://www.npmjs.com/package/html-minifier): `html` and `xsl`
 
 ## Installation
