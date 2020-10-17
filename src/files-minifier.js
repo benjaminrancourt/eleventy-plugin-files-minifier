@@ -5,6 +5,11 @@ module.exports = (value, outputPath) => {
   // Check if the outputPath end by the extension
   const pathEndBy = (extension) => outputPath.includes(extension);
 
+  // CSS
+  if (pathEndBy(".css")) {
+    return prettyData.cssmin(value);
+  }
+
   // HTML and XSL
   if (pathEndBy(".html") || pathEndBy(".xsl")) {
     const config = {
@@ -29,14 +34,14 @@ module.exports = (value, outputPath) => {
     return htmlmin.minify(value, config);
   }
 
+  // JSON and WebManifest
+  if (pathEndBy(".json") || pathEndBy(".webmanifest")) {
+    return prettyData.jsonmin(value);
+  }
+
   // XML
   if (pathEndBy(".xml")) {
     return prettyData.xmlmin(value);
-  }
-
-  // JSON
-  if (pathEndBy(".json") || pathEndBy(".webmanifest")) {
-    return prettyData.jsonmin(value);
   }
 
   return value;
