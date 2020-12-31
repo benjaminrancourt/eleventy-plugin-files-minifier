@@ -2,6 +2,11 @@ const htmlmin = require("html-minifier");
 const { pd: prettyData } = require("pretty-data");
 
 module.exports = (value, outputPath) => {
+  // Make sure that there is a file written before trying to minifying it
+  if (!outputPath) {
+    return value
+  }
+  
   // Check if the outputPath end by the extension
   const pathEndBy = (extension) => outputPath.includes(extension);
 
