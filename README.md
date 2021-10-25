@@ -1,6 +1,6 @@
 # eleventy-plugin-files-minifier
 
-This plugin allow you to automatically **minify** files when builting with **[Eleventy](https://www.11ty.dev/)**.
+This plugin allows you to automatically **minify** files when builting with **[Eleventy](https://www.11ty.dev/)**.
 It currently supports `css`, `html`, `json`, `xml`, `xsl` and `webmanifest` files.
 
 Why should you minify your files? Simply to reduce the data transfered between your hosting servers and your visitors,
@@ -33,10 +33,10 @@ module.exports = (eleventyConfig) => {
 The plugin will automatically minify supported files, you don't need to do anything except the installation!
 
 Make sure that the files you want to minify are currently written by Eleventy. If not, you can easily rename it and add
-Front matter options. By example, for the `manifest.webmanifest` file, I could rename it as `manifest.webmanifest.njk`
+Front matter options. For example, for the `manifest.webmanifest` file, I could rename it as `manifest.webmanifest.njk`
 and add the following code at his top:
 
-```
+```yaml
 ---
 eleventyExcludeFromCollections: true
 permalink: /manifest.webmanifest

@@ -40,19 +40,21 @@
     "format:prettier": "npm run lint:prettier -- --write",
     "lint": "npm-run-all lint:*",
     "lint:eslint": "eslint --ignore-path .gitignore . --ext js,json,md",
-    "lint:prettier": "prettier --ignore-path .gitignore --check '**/*.{js,json,md}'"
+    "lint:prettier": "prettier --ignore-path .gitignore --check '**/*.{js,json,md}'",
+    "update": "ncu -u && npm i && npm audit fix"
   },
   "dependencies": {
     "html-minifier": "^4.0.0",
     "pretty-data": "^0.40.0"
   },
   "devDependencies": {
-    "eslint-config-udes": "^0.4.3",
+    "eslint-config-udes": "^1.2.0",
     "eslint-plugin-json-format": "^2.0.1",
-    "eslint-plugin-markdown": "^1.0.2",
-    "eslint-plugin-prettier": "^3.3.0",
+    "eslint-plugin-markdown": "^2.2.1",
+    "eslint-plugin-prettier": "^4.0.0",
+    "npm-check-updates": "^11.8.5",
     "npm-run-all": "^4.1.5",
-    "prettier": "^2.2.1",
-    "prettier-config-udes": "0.0.6"
+    "prettier": "^2.4.1",
+    "prettier-config-udes": "1.0.2"
   }
 }
