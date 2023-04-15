@@ -12,6 +12,9 @@ module.exports = (value, outputPath) => {
 
   // CSS
   if (pathEndBy(".css")) {
+    if (!value) {
+      return;
+    }
     return prettyData.cssmin(value);
   }
 
